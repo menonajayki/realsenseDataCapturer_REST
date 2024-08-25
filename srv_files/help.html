@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AI-Inspector Help:</title>
+    </head>
+    <body>
+        <h1>AI-Inspector Server Help Page</h1>
+
+        <h2>Available GET requests:</h2>
+        <ul>
+            <li>/help: Returns this page
+                <ul>
+                    <li>Input: None</li>
+                    <li>Return: HTML with this help message"</li>
+                </ul>
+            </li>
+            <li>/getstatus: Returns a JSON file with current internal state of the AI-Inspector
+                <ul>
+                    <li>Input: None</li>
+                    <li>Return: JSON file with status information"</li>
+                </ul>
+            </li>
+            <li>/setidle: Switches back to idle state.
+                <ul>
+                    <li>Input: None</li>
+                    <li>Return: JSON file with status information"</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Available POST requests:</h2>
+        <ul>
+            <li>/settrain: Starts the training of an application.
+                <ul>
+                    <li>Input: JSON file with the application name</li>
+                    <li>Return: Updates the status command with the progress and current accuracy</li>
+                </ul>
+            </li>
+            <li>/setinference: Starts the inference of an application.
+                <ul>
+                    <li>Input: JSON file with the application name</li>
+                    <li>Return: JSON file with: "tag_last_inference", "inference_result" and "inference_time"</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

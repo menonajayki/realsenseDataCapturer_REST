@@ -1,0 +1,42 @@
+{
+  "general_status" : {
+    "hmi_live": false,
+    "known_apps": [
+    {
+      "name": "Arena",
+      "accuracy": 99,
+      "timestamp": "timestamp",
+      "model_path": "/home/vrt/git/models_trained/arena2023-04-05 14:51:32.895123/epoch-58.pt"
+    }
+  ],
+    "current_state": 0,
+    "available_states": [
+      "idle", 
+      "error", 
+      "train", 
+      "inference"]
+  },
+  "state_train" : {
+    "curr_app": "arena",
+    "train_time_elapsed": 0,
+    "train_accuracy": 0,
+    "loss": 0,
+    "epoch": 0,
+    "done": false
+  },
+  "state_inference" : {
+    "curr_app": "arena",
+    "tag_last_inference": "",
+    "inference_result": [ 0.0, 0.0, 0.0 ],
+    "inference_time": 0
+  },
+  "state_error":
+  {
+    "current_error": 0,
+    "possible_errors": [
+      "app_not_known", 
+      "unknown_request", 
+      "state_call_not_allowed", 
+      "timeout"]
+  }
+}
