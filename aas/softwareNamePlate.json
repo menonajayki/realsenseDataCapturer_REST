@@ -1,0 +1,92 @@
+{
+  "aasId": "AAS ID",
+  "customTemplateIds": [
+    "Nameplate ID"
+  ],
+  "language": "EN",
+  "data": {
+    "SoftwareNameplateType": {
+      "URIOfTheProduct": "https://github.com/ARENA2036/RealSense-Camera-API",
+      "ManufacturerName": "Intel Corporation",
+      "ManufacturerProductDesignation": "Intel RealSense Camera API",
+      "ManufacturerProductDescription": "A Flask-based API for capturing images and managing Intel RealSense cameras.",
+      "ManufacturerProductFamily": "RealSense SDK",
+      "ManufacturerProductType": "Camera Control Software",
+      "SoftwareType": "API",
+      "Version": "1.0",
+      "VersionName": "v1.0",
+      "VersionInfo": "Initial release with basic camera operations including start, stop, 2D and 3D image capture.",
+      "ReleaseDate": "2024-09-01",
+      "ReleaseNotes": "Initial release of the RealSense Camera API with support for 2D and 3D image capture, basic camera control, and status reporting.",
+      "ReleaseInformation": "See GitHub repository for full release notes.",
+      "BuildDate": "2024-08-31",
+      "InstallationURI": "https://github.com/ARENA2036/RealSense-Camera-API",
+      "InstallationFile": "install.sh",
+      "InstallerType": "Shell Script",
+      "InstallationChecksum": ""
+    },
+    "SoftwareNameplateInstance": {
+      "SerialNumber": "",
+      "InventoryTag": "RS-API-001",
+      "InstanceName": "RealSense Camera API Instance 1",
+      "InstalledVersion": "1.0",
+      "InstallationDate": "2024-09-01",
+      "InstallationPath": "/usr/local/realsense-api",
+      "InstallationSource": "GitHub Repository",
+      "InstalledOnArchitecture": "x86_64",
+      "InstalledOnOS": "Linux",
+      "InstalledOnHost": "localhost",
+      "InstalledModules": {
+        "InstalledModule": "pyrealsense2"
+      },
+      "ConfigurationPaths": {
+        "ConfigurationPath": {
+          "ConfigurationURI": "/usr/local/realsense-api/config.json",
+          "ConfigurationType": "JSON"
+        }
+      },
+      "SLAInformation": "",
+      "Contact": {
+        "RoleOfContactPerson": "Working Student",
+        "NationalCode": "DE",
+        "Language": "English",
+        "TimeZone": "UTC+1",
+        "CityTown": "Stuttgart",
+        "Company": "ARENA2036",
+        "Department": "Software Development",
+        "Phone": {
+          "TelephoneNumber": "",
+          "TypeOfTelephone": "",
+          "AvailableTime": ""
+        },
+        "Fax": {
+          "FaxNumber": "",
+          "TypeOfFaxNumber": ""
+        },
+        "Email": {
+          "EmailAddress": "ajay.kannanthdath@arena2036.de",
+          "PublicKey": "",
+          "TypeOfEmailAddress": "Work",
+          "TypeOfPublicKey": ""
+        },
+        "IPCommunication__00__": {
+          "AddressOfAdditionalLink": "https://github.com/ARENA2036/RealSense-Camera-API",
+          "TypeOfCommunication": "GitHub",
+          "AvailableTime": "24/7"
+        },
+        "Street": "",
+        "Zipcode": "",
+        "POBox": "",
+        "ZipCodeOfPOBox": "",
+        "StateCounty": "Baden-Württemberg",
+        "NameOfContact": "Ajay Menon",
+        "FirstName": "Ajay",
+        "MiddleNames": "",
+        "Title": "",
+        "AcademicTitle": "",
+        "FurtherDetailsOfContact": "Working student at ARENA2036 under supervision of David.",
+        "AddressOfAdditionalLink": "https://github.com/ARENA2036/RealSense-Camera-API"
+      }
+    }
+  }
+}

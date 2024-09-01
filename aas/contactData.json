@@ -1,0 +1,50 @@
+{
+  "aasId": "AAS ID",
+  "customTemplateIds": [
+    "Nameplate ID"
+  ],
+  "language": "EN",
+  "data": {
+    "ContactInformation": {
+      "RoleOfContactPerson": "Forschungskoordinator",
+      "NationalCode": "DE",
+      "Language": "German, English",
+      "TimeZone": "CET",
+      "CityTown": "Stuttgart",
+      "Company": "ARENA2036",
+      "Department": "Forschungstransfer",
+      "Phone": {
+        "TelephoneNumber": "",
+        "TypeOfTelephone": "Work",
+        "AvailableTime": ""
+      },
+      "Fax": {
+        "FaxNumber": "",
+        "TypeOfFaxNumber": "Work"
+      },
+      "Email": {
+        "EmailAddress": "",
+        "PublicKey": "",
+        "TypeOfEmailAddress": "Work",
+        "TypeOfPublicKey": ""
+      },
+      "IPCommunication__00__": {
+        "AddressOfAdditionalLink": "https://www.linkedin.com/in/david-görzig/",
+        "TypeOfCommunication": "LinkedIn",
+        "AvailableTime": ""
+      },
+      "Street": "",
+      "Zipcode": "",
+      "POBox": "",
+      "ZipCodeOfPOBox": "",
+      "StateCounty": "Baden-Württemberg",
+      "NameOfContact": "David Görzig",
+      "FirstName": "David",
+      "MiddleNames": "",
+      "Title": "Mr.",
+      "AcademicTitle": "",
+      "FurtherDetailsOfContact": "Forschungskoordinator at ARENA2036, working on Catena-X and Transfer-X projects.",
+      "AddressOfAdditionalLink": "https://www.linkedin.com/in/david-görzig/"
+    }
+  }
+}

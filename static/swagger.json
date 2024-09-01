@@ -1,0 +1,454 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RealSense Camera API",
+    "version": "1.0.0",
+    "description": "A simple RealSense Camera API"
+  },
+  "paths": {
+    "/camera/start": {
+      "post": {
+        "summary": "Start the camera",
+        "responses": {
+          "200": {
+            "description": "Camera started",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "Camera started"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error starting camera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/camera/stop": {
+      "post": {
+        "summary": "Stop the camera",
+        "responses": {
+          "200": {
+            "description": "Camera stopped",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "Camera stopped"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/camera/capture": {
+      "get": {
+        "summary": "Capture a 2D image from the camera",
+        "responses": {
+          "200": {
+            "description": "Captured image",
+            "content": {
+              "image/jpeg": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Camera is not active",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error capturing image",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/camera/status": {
+      "get": {
+        "summary": "Get the current status of the camera",
+        "responses": {
+          "200": {
+            "description": "Current status of the camera",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "camera_active": {
+                      "type": "boolean"
+                    },
+                    "resolution": {
+                      "type": "string"
+                    },
+                    "frame_rate": {
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Camera is not active",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/camera/settings": {
+      "post": {
+        "summary": "Update camera settings",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "example": 640
+                  },
+                  "height": {
+                    "type": "integer",
+                    "example": 480
+                  },
+                  "frame_rate": {
+                    "type": "integer",
+                    "example": 30
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Settings updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "Settings updated"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error updating settings",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publisher": {
+                      "type": "string",
+                      "example": "YourName"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/aas/ContactInformation": {
+      "get": {
+        "summary": "Get contact information",
+        "responses": {
+          "200": {
+            "description": "Contact information retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "John Doe"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "johndoe@example.com"
+                    },
+                    "phone": {
+                      "type": "string",
+                      "example": "+1234567890"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Contact information not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/aas/SoftwareNamePlate": {
+      "get": {
+        "summary": "Get software nameplate",
+        "responses": {
+          "200": {
+            "description": "Software nameplate retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "software_version": {
+                      "type": "string",
+                      "example": "1.0.0"
+                    },
+                    "software_name": {
+                      "type": "string",
+                      "example": "RealSense Camera API"
+                    },
+                    "developer": {
+                      "type": "string",
+                      "example": "YourName"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Software nameplate not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/aas/Documentation": {
+      "get": {
+        "summary": "Get documentation",
+        "responses": {
+          "200": {
+            "description": "Documentation retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "doc_url": {
+                      "type": "string",
+                      "example": "http://example.com/docs/realsense-camera-api"
+                    },
+                    "doc_version": {
+                      "type": "string",
+                      "example": "v1.0.0"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Documentation not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    },
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
